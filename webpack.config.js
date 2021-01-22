@@ -13,8 +13,8 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname,'dist'),
         port: 5050,
-        compress:true,
-        publicPath:'/'
+        compress: true,
+        publicPath: '/'
     },
     module :{
         rules:[
@@ -23,6 +23,10 @@ module.exports = {
                 exclude:/node_modules/,
                 use: ['babel-loader']
             },
+            {
+                test: /\.css$/,
+                use: ['style-loader','css-loader']
+            }
         ]
     },
     plugins : [new ESLintPlugin()]
