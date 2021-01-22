@@ -1,4 +1,3 @@
-body{
-    color: turquoise;
-    background-color: black;
-}
+@tailwind base;
+@tailwind xomponents;
+@tailwind utilities;
